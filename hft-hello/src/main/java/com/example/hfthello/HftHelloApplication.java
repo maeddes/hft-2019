@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -48,6 +49,14 @@ public class HftHelloApplication {
 
 	}
 
+	@DeleteMapping("/todos/{todo}")
+	String removeTodo(@PathVariable String todo) {
+
+		todos.remove(todo);
+		return todo + " has been added to the new list";
+
+	}
+
 	@PostMapping(value = "/todos/",consumes = "application/json")
 	public String addTodos(@RequestBody List<String> new_todos) {
 
@@ -57,9 +66,9 @@ public class HftHelloApplication {
 	}
 
 	@GetMapping("/todos")
-	public String listTodos(){
+	public List<String >listTodos(){
 
-		return todos.toString();
+		return todos;
 	}
 	
 	public static void main(String[] args) {
