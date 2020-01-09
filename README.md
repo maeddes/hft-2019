@@ -12,3 +12,7 @@ lecture materials for class HfT 2019
 
 - https://www.cloudfoundry.org/get-started/
 - https://kubernetes.io/
+
+## Slides:
+
+- https://drive.google.com/open?id=1hSjvUH7x3FopgC2hVEBA0nyYP5GiDtzO
