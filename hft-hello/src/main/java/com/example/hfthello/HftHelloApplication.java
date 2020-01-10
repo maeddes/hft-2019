@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-@RefreshScope
 public class HftHelloApplication {
 
 	String user = "default";
@@ -30,7 +29,7 @@ public class HftHelloApplication {
 	@GetMapping("/hello")
 	String sayHello(){
 
-		return "Hello Hft, Good Morning "+user;
+		return "Hello Hft, Good Morning and very happy new year "+user;
 	}
 
 	@PostMapping("/user/{username}")
@@ -45,6 +44,7 @@ public class HftHelloApplication {
 	public String addTodo(@PathVariable("newtodo") String todo){
 
 		todos.add(todo);
+		System.out.println(" New Todo added just now: "+todo);
 		return todo+" has been added to the new list";
 
 	}

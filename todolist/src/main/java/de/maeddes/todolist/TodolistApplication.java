@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.xml.bind.annotation.XmlValue;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -39,8 +40,10 @@ public class TodolistApplication {
 	String addTodo(@PathVariable String todo) {
 
 		todoRepository.save(new Todo(todo));
+		System.out.println("Adding :"+todo);
 		return "added " + todo;
 	}
+
 
 	@DeleteMapping("/todos/{todo}")
 	String removeTodo(@PathVariable String todo) {
