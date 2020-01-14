@@ -1,5 +1,5 @@
 # hft-2019
-lecture materials for class HfT 2019
+lecture materials for class winter semester HfT 2019
 
 ## Recommended Links:
 
