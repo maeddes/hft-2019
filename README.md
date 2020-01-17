@@ -20,4 +20,4 @@ lecture materials for class winter semester HfT 2019
 
 ## Sample Repo for CF, K8s
 
-- 
+- https://github.com/maeddes/cf-vs-k8s
